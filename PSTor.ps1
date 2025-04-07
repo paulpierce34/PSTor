@@ -1,10 +1,16 @@
 Import-Module Selenium
 
-$WebDriverDirectory = "$env:USERPROFILE\Documents\chromedriver-win64-new\"
+## Default values if not provided in function calls
 $TorPath = "$env:USERPROFILE\Desktop\Tor Browser\Browser\TorBrowser\Tor\"
+$WebDriverPath = "$env:USERPROFILE\Documents\chromedriver-win64-new\"
 
 ## TOR SECTION
 function Start-Tor{
+[CmdletBinding()]
+param(
+[Parameter(Mandatory=$false, HelpMessage="Specify directory path to tor.exe. Default: 'Desktop\Tor Browser\Browser\TorBrowser\Tor'")]
+[string]$TorPath = "$env:USERPROFILE\Desktop\Tor Browser\Browser\TorBrowser\Tor\"
+)
 
  ## Path to Tor directory (where tor.exe lives)
 $TorExe = "tor.exe"
@@ -63,6 +69,7 @@ Stop-Process -Id $TorprocessID
 }
 else {
 write-host "Having some trouble finding any tor processes running. Quitting script."
+break
 }
 
 
@@ -83,9 +90,14 @@ write-host -foregroundcolor Red "Still seeing this process in existence... Weird
 
 ## SELENIUM SECTION
 function Start-WebCrawl {
+[CmdletBinding()]
+param(
+[Parameter(Mandatory=$false, HelpMessage="Specify directory path to tor.exe. Default: 'Documents\chromedriver-win64-new\' ")]
+[string]$WebDriverPath = "$env:USERPROFILE\Documents\chromedriver-win64-new\"
+)
 
 ## Set up the Selenium WebDriver (using Chrome in this case)
-$driver = Start-SeChrome -Headless -WebDriverDirectory $WebDriverDirectory -Arguments '--proxy-server=socks5://127.0.0.1:9050'
+$driver = Start-SeChrome -Headless -WebDriverDirectory $WebDriverPath -Arguments '--proxy-server=socks5://127.0.0.1:9050'
 write-host -foregroundcolor yellow "Reaching out to check.torproject.org to verify TOR network connectivity..."
 $driver.Navigate().GoToUrl('https://check.torproject.org/')
 if (($driver.FindElementsByClassName("not")).text -notmatch "Congratulations. This browser is configured to use Tor."){

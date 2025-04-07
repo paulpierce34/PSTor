@@ -11,3 +11,6 @@ Connect to the Tor network seamlessly with Powershell!
 - Call the Start-Tor function to initialize Tor local proxy
 - Start-Webcrawl to verify Tor connectivity and begin your web crawling excursions
 - Call Stop-Tor to kill your process
+
+## EXAMPLE USAGE:
+![Uploading ClipChamp-Tor-Video-ezgif.com-video-to-gif-converter.gif…]()

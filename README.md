@@ -3,7 +3,7 @@ Connect to the Tor network seamlessly with Powershell! The purpose of this scrip
 
 ## PREREQUISITES:
 - Tor installed (tor.exe binary required)
-- Selenium & Chrome webdriver (if you want to execute WebCrawl function)
+- Selenium & Chrome webdriver (if you want to execute optional WebCrawl function)
 
 ## HOW TO USE:
 - Git clone to your machine

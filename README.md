@@ -1,5 +1,5 @@
 # PSTor
-Connect to the Tor network seamlessly with Powershell!
+Connect to the Tor network seamlessly with Powershell! The purpose of this script is to provide easy function calls for starting/stopping a local Tor proxy and connecting to this proxy via Selenium. The ideal workflow is to run Start-Tor to initialize your Tor proxy, and then Start-WebCrawl to begin your webcrawling excursions. Use Stop-Tor when you are finished.
 
 ## PREREQUISITES:
 - Tor installed (tor.exe binary required)

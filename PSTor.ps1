@@ -1,6 +1,6 @@
 Import-Module Selenium
 
-$WebDriverDirectory = "C:\Users\admin\Documents\chromedriver-win64-new\"
+$WebDriverDirectory = "$env:USERPROFILE\Documents\chromedriver-win64-new\"
 $TorPath = "$env:USERPROFILE\Desktop\Tor Browser\Browser\TorBrowser\Tor\"
 
 ## TOR SECTION

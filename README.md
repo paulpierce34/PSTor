@@ -14,6 +14,8 @@ The ideal workflow is to run Start-Tor to initialize your Tor proxy, and then St
 - Start-Webcrawl to verify Tor connectivity and begin your web crawling excursions
 - Call Stop-Tor to kill your process
 
+*NOTE: By default assumes your Tor directory is located here: $env:USERPROFILE\Desktop\Tor Browser\Browser\TorBrowser\Tor\ *
+
 ## EXAMPLE USAGE:
 
 ![ClipChamp-Tor-Video-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/f995c250-9d38-4473-b598-e3a7aa6e431c)

@@ -18,4 +18,8 @@ The ideal workflow is to run Start-Tor to initialize your Tor proxy, and then St
 
 ## EXAMPLE USAGE:
 
+### Start-Tor -TorPath "$env:USERPROFILE\Desktop\Tor Browser\Browser\TorBrowser\Tor\"
+
+### Start-WebCrawl -WebDriverPath "$env:USERPROFILE\Documents\chromedriver-win64-new\"
+
 ![ClipChamp-Tor-Video-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/f995c250-9d38-4473-b598-e3a7aa6e431c)

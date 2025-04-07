@@ -14,7 +14,7 @@ The ideal workflow is to run Start-Tor to initialize your Tor proxy, and then St
 - Start-Webcrawl to verify Tor connectivity and begin your web crawling excursions
 - Call Stop-Tor to kill your process
 
-**NOTE: ** By default assumes your Tor directory is located here: $env:USERPROFILE\Desktop\Tor Browser\Browser\TorBrowser\Tor\
+**NOTE: ** By default assumes your Tor directory is located here: $env:USERPROFILE\Desktop\Tor Browser\Browser\TorBrowser\Tor\. Modify $TorPath variable to change.
 
 ## EXAMPLE USAGE:
 

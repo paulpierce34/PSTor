@@ -1,9 +1,5 @@
 Import-Module Selenium
 
-## Default values if not provided in function calls
-$TorPath = "$env:USERPROFILE\Desktop\Tor Browser\Browser\TorBrowser\Tor\"
-$WebDriverPath = "$env:USERPROFILE\Documents\chromedriver-win64-new\"
-
 ## TOR SECTION
 function Start-Tor{
 [CmdletBinding()]

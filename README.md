@@ -14,7 +14,7 @@ The ideal workflow is to run Start-Tor to initialize your Tor proxy, and then St
 - Start-Webcrawl to verify Tor connectivity and begin your web crawling excursions
 - Call Stop-Tor to kill your process
 
-**NOTE: ** Modify $TorPath and $WebDriverPath variables with appropriate paths for tor/selenium
+**NOTE: ** Specify $TorPath and $WebDriverPath variables with appropriate paths for tor/selenium
 
 ## EXAMPLE USAGE:
 ```

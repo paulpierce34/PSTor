@@ -1,16 +1,19 @@
-﻿Import-Module Selenium
+Import-Module Selenium
 
+$WebDriverDirectory = "C:\Users\admin\Documents\chromedriver-win64-new\"
+$TorPath = "$env:USERPROFILE\Desktop\Tor Browser\Browser\TorBrowser\Tor\"
 
 ## TOR SECTION
 function Start-Tor{
 
-$TorPath = "$env:USERPROFILE\Desktop\Tor Browser\Browser\TorBrowser\Tor\" ## Path to Tor directory (where tor.exe lives)
+ ## Path to Tor directory (where tor.exe lives)
 $TorExe = "tor.exe"
 $LogFile = "tor-proxy.log" ## custom logfile name
 
 
 $TorExePath = Join-Path $TorPath $TorExe
 $LogFilePath = Join-Path $TorPath $LogFile
+cd $TorPath
 
 write-host "Executing Start-Tor function..."
 sleep(.2)
@@ -82,7 +85,7 @@ write-host -foregroundcolor Red "Still seeing this process in existence... Weird
 function Start-WebCrawl {
 
 ## Set up the Selenium WebDriver (using Chrome in this case)
-$driver = Start-SeChrome -Headless -WebDriverDirectory "C:\Users\admin\Documents\chromedriver-win64-new\" -Arguments '--proxy-server=socks5://127.0.0.1:9050'
+$driver = Start-SeChrome -Headless -WebDriverDirectory $WebDriverDirectory -Arguments '--proxy-server=socks5://127.0.0.1:9050'
 write-host -foregroundcolor yellow "Reaching out to check.torproject.org to verify TOR network connectivity..."
 $driver.Navigate().GoToUrl('https://check.torproject.org/')
 if (($driver.FindElementsByClassName("not")).text -notmatch "Congratulations. This browser is configured to use Tor."){

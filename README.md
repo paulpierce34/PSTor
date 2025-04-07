@@ -13,4 +13,5 @@ Connect to the Tor network seamlessly with Powershell!
 - Call Stop-Tor to kill your process
 
 ## EXAMPLE USAGE:
-![Uploading ClipChamp-Tor-Video-ezgif.com-video-to-gif-converter.gif…]()
+
+![ClipChamp-Tor-Video-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/f995c250-9d38-4473-b598-e3a7aa6e431c)
